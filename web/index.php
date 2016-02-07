@@ -1,7 +1,9 @@
 <?php
 require_once('../core/Router.php'); 
+require_once('../vendor/autoload.php');	
+require_once('../config/config.php');
 require_once('../config/routing.php'); 
-require_once ('../vendor/autoload.php');
+require_once('.././src/controller/TestController.php');
 
 $uri = $_SERVER['REQUEST_URI'];
 $dir = __DIR__;
@@ -26,6 +28,5 @@ $twig = new Twig_Environment($loader, array(
 
 echo $twig->render('test.html',array('toto'=>'laure'));
 
-// require_once('../src/Controller/' .$_GET['page'] .'.php');
  
 ?>
