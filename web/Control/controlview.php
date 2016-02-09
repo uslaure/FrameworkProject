@@ -7,6 +7,6 @@ class ControlView
 {
     public function index()
     {
-        echo $twig->render('test.html.twig',array('toto'=>'laure'));
+        echo $twig->render('test.html',array('toto'=>'laure'));
     }
 }
